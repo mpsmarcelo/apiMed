@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>med.voll</groupId>
-	<artifactId>apiMp</artifactId>
+	<artifactId>apiMed</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>apiMp</name>
 	<description>API rest aplicação voll.med</description>
@@ -69,6 +69,16 @@
 			<artifactId>modelmapper</artifactId>
 			<version>3.0.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
