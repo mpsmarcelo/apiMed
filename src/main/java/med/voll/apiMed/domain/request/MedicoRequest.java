@@ -8,19 +8,19 @@ import jakarta.validation.constraints.Pattern;
 import med.voll.apiMed.enuns.Especialidade;
 
 public record MedicoRequest(
-        @NotBlank
+        @NotBlank(message = "Nome é obrigatório!")
         String nome,
-        @NotBlank
+        @NotBlank(message = "Email é obrigatório!")
         @Email
         String email,
-        @NotBlank
+        @NotBlank(message = "Telefone é obrigatório!")
         String telefone,
-        @NotBlank
+        @NotBlank(message = "CRM é obrigatório!")
         @Pattern(regexp = "\\d{4,6}")
         String crm,
-        @NotNull
+        @NotNull(message = "Especialidade é obrigatório!")
         Especialidade especialidade,
-        @NotNull
+        @NotNull(message = "Endereço é obrigatório!")
         @Valid
         EnderecoRequest endereco
 

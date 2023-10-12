@@ -4,20 +4,20 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
 public record EnderecoRequest(
-        @NotBlank
+        @NotBlank(message = "Logradouro é obrigatório!")
         String logradouro,
-        @NotBlank
+        @NotBlank(message = "Bairro é obrigatório!")
         String bairro,
-        @NotBlank
+        @NotBlank(message = "CEP é obrigatório!")
         @Pattern(regexp = "\\d{8}")
         String cep,
-        @NotBlank
+        @NotBlank(message = "Cidade é obrigatório!")
         String cidade,
-        @NotBlank
+        @NotBlank(message = "UF é obrigatório!")
         String uf,
-        @NotBlank
+        @NotBlank(message = "Número é obrigatório!")
         String numero,
-        @NotBlank
+        @NotBlank(message = "Complemento é obrigatório!")
         String complemento
 ) {
 }
